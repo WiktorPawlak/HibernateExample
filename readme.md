@@ -1,24 +1,18 @@
-# Armors Control Panel
+# Hibernate Example
 
-![Code Check](https://github.com/armors-dotnet/armors_control_panel/actions/workflows/code_check.yml/badge.svg)
-![Build Status](https://github.com/armors-dotnet/armors_control_panel/actions/workflows/create_release.yml/badge.svg)
+[![Java CI with Maven](https://github.com/WiktorPawlak/HibernateExample/actions/workflows/maven.yml/badge.svg)]
 
-This is a project of a control panel application for robots created as part of the aRMoRS project
+Introducing Hibernate - ORM for java integration with database.
+
+This repository contains examples of usage of the considered framework.
 
 ## Development requirements
 
-1.  Node.js 16.x - <https://nodejs.org/en/>
+1.  Apache Maven 3.8.3    - <https://maven.apache.org/>
+2.  JDK 17                - <https://openjdk.java.net/projects/jdk/17/>
+3.  PostgreSQL 14.1       - <https://www.postgresql.org/>
+4.  Hibernate 5.6.3.Final - <https://mvnrepository.com/artifact/org.hibernate/hibernate-core>
 
 ## Configuration
 
-To download all dependencies and configure project run:
-
-```bash
-npm install
-```
-
-To checking downloaded packages:
-
-```bash
-npm audit --production
-```
+Setup up server on local host with PostgreSQL. Edit both hibernate.cfg.xml configuration files according to your needs.
