@@ -22,6 +22,7 @@
         <property name="show_sql">true</property>
 
         <!-- Drop and re-create/create/update whole database on startup -->
+        <!-- If you don't want to loose data from db change 'create' to 'update'-->
         <property name="hibernate.hbm2ddl.auto">update</property>
 
         <!-- Annotated entity classes -->

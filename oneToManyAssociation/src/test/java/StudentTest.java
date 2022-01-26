@@ -36,7 +36,25 @@ class StudentTest {
 
     @Test
     void readTest() {
+        SessionFactory sessionFactory = new Configuration().configure()
+                .buildSessionFactory();
+        Student student = null;
+        try (Session session = sessionFactory.openSession()) {
+            Transaction transaction = session.beginTransaction();
 
+            student = (Student) session.createQuery("select s from student s").getResultList().get(0);
+
+            System.out.println("ID " + student.getStudentId().toString());
+            System.out.println("Name " + student.getName());
+            System.out.println("Age: " + student.getAge());
+            System.out.println("Mark id: " + student.getMarks().get(2).getFieldId());
+            System.out.println("Mark: " + student.getMarks().get(2).getValue());
+            System.out.println("Is editable? " + student.getMarks().get(2).isEditable());
+
+            transaction.commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 //    void close() {
